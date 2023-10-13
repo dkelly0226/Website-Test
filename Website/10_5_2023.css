@@ -1,0 +1,120 @@
+* {
+    box-sizing: boarder=box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+}
+
+nav {
+    height: 85px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px, 0;
+    margin: auto;
+}
+
+.textlogo {
+    color: red;
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+nav a {
+    text-decoration: none;
+    color: red;
+    margin: 0 20px;
+    display: inline-block;
+    position: relative;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.CS {
+    background-color: rgb(159, 175, 204);
+}
+
+.CS-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    padding: 35px, 0;
+}
+
+.Column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    color: black;
+    padding: 0rem 2rem;
+}
+
+.Column-left h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.Column-left p {
+    margin-bottom: 5%;
+    font-size: 1.5rem;
+    line-height: 5;
+}
+
+button {
+    padding: 20px 10px;
+    font-size: 1rem;
+    border: none;
+    color: rgb(255, 255, 0);
+    background-color: black;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 200px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+.Column-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem;
+}
+
+.CS-image {
+    width: 75%;
+    height: 75%;
+}
+
+@media screen and (max-width: 768px) {
+    .CS-container {
+        grid-template-columns: 1fr;
+    }
+}
